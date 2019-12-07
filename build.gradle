@@ -3,9 +3,10 @@
 buildscript {
   repositories {
     jcenter()
+    google()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.3'
+    classpath 'com.android.tools.build:gradle:3.5.3'
 
 //    classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
 //    classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
@@ -18,14 +19,10 @@ allprojects {
   repositories {
     jcenter()
     maven { url "https://jitpack.io" }
+    google()
   }
 }
 
 task clean(type: Delete) {
   delete rootProject.buildDir
-}
-
-ext {
-  supportLibraryVersion = '25.3.1'
-  photoViewVersion = 'v1.2.5'
 }
